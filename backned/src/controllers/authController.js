@@ -109,6 +109,4 @@ export const getProfile =async (req,res)=>{
         })
     }
 }
-export const LogoutUser = (req,res)=>{
-
-}
+    
