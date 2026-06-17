@@ -1,10 +1,10 @@
 import express from "express";
-import UserRouter from "./routes/userRoutes.js";
+import AuthRouter from "./routes/authRoutes.js";
 const app = express();
 app.get("/",(req,res)=>{
     res.send("Hello");
 })
 app.use(express.json());
-app.use("/users",UserRouter);
+app.use("/auth",AuthRouter);
 
-export default app;
+export default app; 
