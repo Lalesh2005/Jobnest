@@ -6,3 +6,11 @@ export const loginUser =async (userData)=>{
         userData);
     return response.data;
 }
+
+export const registerUser = async (registerData)=>{
+    const response = await api.post(
+        "auth/register",
+        registerData
+    );
+    return response.data;
+}

@@ -1,8 +1,10 @@
 import {useState} from "react";
 import {loginUser} from "../services/authServices";
+import { useNavigate } from "react-router-dom";
 
 
 function Login(){
+    const navigate = useNavigate();
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [rememberMe, setRememberMe] = useState(false);
@@ -242,9 +244,13 @@ function Login(){
             {/* Register */}
             <p className="text-center text-slate-500 text-sm mt-7">
               Don't have an account?{" "}
-              <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+              <button
+              type="button"
+              onClick={() => navigate("/register")}
+              className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+              >
                 Create one free
-              </a>
+              </button>
             </p>
           </div>
  
