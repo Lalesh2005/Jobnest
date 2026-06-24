@@ -48,6 +48,7 @@ export const LoginUser =async (req,res)=>{
             })
         }
         const user =await User.findOne({email});
+        console.log("USER:", user);
         if(!user){
             return res.status(401).json({
                 success:false,
@@ -61,6 +62,7 @@ export const LoginUser =async (req,res)=>{
                 message:"Invalid credentials"
             })
         }
+        console.log("PASSWORD MATCH:", checkPassword);
         const token = jwt.sign({
             id:user._id,
 
