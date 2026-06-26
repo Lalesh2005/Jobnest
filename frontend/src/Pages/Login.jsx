@@ -22,7 +22,8 @@ function Login(){
     );
             console.log("Token Saved");
             console.log("SUCCESS");
-            console.log(data);
+            console.log(userData);
+            navigate("/dashboard");
         }
         catch(error){
             console.log(error.response?.data);
